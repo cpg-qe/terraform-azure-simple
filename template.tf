@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "main" {
-  name     = "${var.resourceGroup}+${random_id.id.hex}"
+  name     = "${var.resourceGroup}_${random_id.id.hex}"
   location = "${var.region}"
 }
 

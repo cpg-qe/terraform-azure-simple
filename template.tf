@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "main" {
-  name     = "${var.resourceGroup}"
+  name     = "${var.resourceGroup}+${random_id.id.hex}"
   location = "${var.region}"
 }
 
@@ -92,4 +92,7 @@ resource "azurerm_virtual_machine_data_disk_attachment" "example" {
   virtual_machine_id = "${azurerm_virtual_machine.main.id}"
   lun                = "10"
   caching            = "ReadWrite"
+}
+resource "random_id" "id" {
+  byte_length = 2
 }

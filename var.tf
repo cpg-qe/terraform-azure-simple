@@ -10,7 +10,9 @@ variable "region" {
 
 variable "subscriptionId" {}
 variable "clientId" {}
+//variable "clientSecret" {}
 variable "clientSecret" {}
+//variable "clientSecret" {}
 variable "resourceGroup" {
   default     = "ComplexVarTestRG"
 }

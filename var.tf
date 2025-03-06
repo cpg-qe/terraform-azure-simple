@@ -142,12 +142,3 @@ variable "objectVar" {
  })
  description = "Tags for the EC2 instance"
 }
-
-variable "TagDiskVar" {
-  type = map
-  default = {
-    cpg = "Disk"
-    Team  = "CPG"
-    // Add more tags as needed
-  }
-}
